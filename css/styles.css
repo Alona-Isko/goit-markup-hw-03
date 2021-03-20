@@ -61,14 +61,42 @@ img {
 }
 
 
-/*Site-nav*/
+/*Main-nav*/
+
+ .main-nav {
+  display: flex;
+  align-items: center;
+} 
+
+.page-nav {
+  display: flex;
+  margin-left: 93px;
+}
+
+.page-nav .part + .part {
+  margin-left: 50px;
+}
+
+.contacts {
+  display: flex;
+  margin-left: auto;
+}
+
+.contacts .part + .part {
+  margin-left: 50px;
+}
+
 .site-nav {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  text-decoration: none;
+  text-decoration: none;  
 }
 
 .site-nav:hover,
@@ -83,6 +111,7 @@ img {
 .top-nav {
   color: var(--primary-text-color);
 }
+
 
 /*Main*/
 main {
@@ -123,6 +152,7 @@ outline: 2px solid tomato;
 .button {
   border-radius: 4px;
   padding: 10px 32px;
+  margin-bottom: 200px;
 
   background-color: var(--accent-color);
   color: var(--primary-white-color);
@@ -131,6 +161,8 @@ outline: 2px solid tomato;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /*Sections*/
@@ -139,9 +171,16 @@ outline: 2px solid tomato;
   padding-bottom: 0;
 }
 
+
+/*About Us*/
 .about-main-title {
   margin-top: 0;
   margin-bottom: 0;
+  color: rgba(0, 0, 0, 0);
+}
+
+.about {
+  display: flex;
 }
 
 .section-title {
@@ -156,7 +195,6 @@ outline: 2px solid tomato;
   text-align: center;
 }
 
-/*About Us*/
 .about-title {
   margin-bottom: 10px;
 
@@ -207,10 +245,17 @@ outline: 2px solid tomato;
 }
 
 /*Portfolio*/
+.bt {
+  display: flex;
+  padding: 0;
+  justify-content: center;
+}
+
 .works-button {
   border: none;
   border-radius: 4px;
   padding: 6px 22px;
+  margin-left: 8px;
 
   color: var(--title-text-color);
   background-color: var(--background-second-color);
