@@ -5,7 +5,9 @@
   --primary-white-color: #ffffff;
   --background-second-color: #f5f4fa;
   --background-dark-color: #2f303a;
+  --cards-shadow-25: 0px 4px 4px rgba(0, 0, 0, 0.25);
   --card-set-gap: 30px;
+  --section-gap: 94px;
 }
 
 body {
@@ -40,6 +42,9 @@ img {
   list-style: none;
 }
 
+header {
+  border-bottom: 1px solid #ECECEC;;
+}
 
 /*Logo*/
 .logo {
@@ -126,13 +131,12 @@ padding-left: 15px;
 margin-left: auto;
 margin-right: auto;
 
-outline: 2px solid tomato;
+/* outline: 2px solid tomato; */
 }
 
 
 /*Hero*/
 .hero-title {
-  margin-top: 0;
   margin-bottom: 30px;
   color: var(--primary-white-color);
 
@@ -145,14 +149,15 @@ outline: 2px solid tomato;
 }
 
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
   text-align: center;
-  background-color: #2f303a;
+  background-color: var(--background-dark-color);
 }
 
 .button {
   border-radius: 4px;
   padding: 10px 32px;
-  margin-bottom: 200px;
 
   background-color: var(--accent-color);
   color: var(--primary-white-color);
@@ -171,28 +176,26 @@ outline: 2px solid tomato;
   padding-bottom: 0;
 }
 
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 
 /*About Us*/
-.about-main-title {
-  margin-top: 0;
-  margin-bottom: 0;
-  color: rgba(0, 0, 0, 0);
+.title-none {
+  position: absolute;
+  visibility: hidden;
 }
 
 .about {
   display: flex;
+
+  padding: 0;
+  margin: 0;
 }
 
-.section-title {
-  margin-top: 94px;
-  margin-bottom: 50px;
-
-  color: var(--title-text-color);
-
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
+.about .about-item + .about-item {
+  margin-left: var(--card-set-gap);
 }
 
 .about-title {
@@ -215,11 +218,59 @@ outline: 2px solid tomato;
 }
 
 /*Work list*/
+.our-work {
+  padding-top: 0;
+}
+
+.section-title {
+  margin-bottom: 50px;
+
+  color: var(--title-text-color);
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.work-list {
+    display: flex;
+
+    padding: 0;
+    margin: 0;
+}
+
+.work-list-item {
+   box-shadow: var(--cards-shadow-25);
+}
+
+.work-list .work-list-item + .work-list-item {
+  margin-left: 30px;
+}
 
 /*Our Team*/
 
 .team {
   background-color: #f5f4fa;
+}
+
+.team-title {
+  margin-top: 0;
+}
+
+.workers {
+  display: flex;
+
+  padding: 0;
+  margin: 0;
+
+  margin-left: calc( -1 * var(--card-set-gap));}
+
+.workers-card {
+  flex-basis: calc(100% / 4 - var(--card-set-gap));
+  margin-left: var(--card-set-gap);
+
+  box-shadow: var(--cards-shadow-25);
 }
 
 .workers .title {
@@ -235,7 +286,7 @@ outline: 2px solid tomato;
 
 .workers .text {
   margin-top: 0;
-  margin-bottom: 0;
+  padding-bottom: var(--card-set-gap);
 
   color: var(--primary-text-color);
   font-weight: 400;
@@ -245,17 +296,28 @@ outline: 2px solid tomato;
 }
 
 /*Portfolio*/
+
 .bt {
   display: flex;
   padding: 0;
+  margin: 0;
+  margin-bottom: 50px;
   justify-content: center;
 }
 
-.works-button {
-  border: none;
-  border-radius: 4px;
-  padding: 6px 22px;
+.bt .bt-works + .bt-works {
   margin-left: 8px;
+}
+
+.bt-works {
+  box-shadow: var(--cards-shadow-25); 
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.works-button {
+  border: 0px solid transparent;
+  padding: 6px 22px;
 
   color: var(--title-text-color);
   background-color: var(--background-second-color);
@@ -274,6 +336,8 @@ outline: 2px solid tomato;
 }
 
 .works-button:active {
+  text-shadow: var(--cards-shadow-25);
+
   color: var(--primary-white-color);
   background-color: var(--accent-color);
 }
@@ -308,7 +372,8 @@ outline: 2px solid tomato;
 }*/
 
 .card {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--cards-shadow-25);
+  border-top: 1px solid #EEEEEE;;
 }
 
 .card-content {
@@ -335,6 +400,8 @@ outline: 2px solid tomato;
 
 /*Footer*/
 .bottom {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--background-dark-color);
 }
 
@@ -343,6 +410,7 @@ outline: 2px solid tomato;
 }
 
 .address {
+  margin-top: 20px;
   color: var(--primary-white-color);
 
   font-style: normal;
@@ -367,3 +435,6 @@ outline: 2px solid tomato;
   text-decoration: none;
 }
 
+.bottom-nav-item {
+  margin-top: 9px;
+}
